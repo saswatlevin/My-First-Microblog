@@ -1,0 +1,144 @@
+2018-07-15 15:43:47,864 ERROR: Exception on / [GET] [in c:\microblog\virtualenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\microblog\virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\microblog\app\routes.py", line 35, in index
+    return render_template('index.html',title='Home',form=form,posts=posts)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\microblog\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\microblog\app\templates\index.html", line 8, in block "content"
+    {% for error in form.my_Post.errors %}
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.PostForm object' has no attribute 'my_Post'
+2018-07-15 15:44:20,068 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 15:45:18,460 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 15:48:38,247 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 15:55:47,692 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 15:57:12,394 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 16:16:09,629 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 16:22:14,196 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 16:22:28,424 ERROR: Exception on /user/saswatlevin/ [GET] [in c:\microblog\virtualenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\microblog\virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\microblog\app\routes.py", line 147, in user
+    return render_template('user.html',user=user,posts=posts)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\microblog\app\templates\base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\microblog\app\templates\user.html", line 27, in block "content"
+    {% include '_posts.html' %}
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: _posts.html
+2018-07-15 16:23:10,194 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 16:23:30,174 ERROR: Exception on /user/saswatlevin/ [GET] [in c:\microblog\virtualenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\microblog\virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\microblog\app\routes.py", line 147, in user
+    return render_template('user.html',user=user,posts=posts)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\_post.html", line 4, in template
+    <td><a href="url_for{{'user',username=post.author.username}}"></a> says: <b>{{post.body}}</b></td>
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\microblog\app\templates\base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\microblog\app\templates\user.html", line 27, in block "content"
+    {% include '_post.html' %}
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\_post.html", line 4, in template
+    <td><a href="url_for{{'user',username=post.author.username}}"></a> says: <b>{{post.body}}</b></td>
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\parser.py", line 876, in subparse
+    self.stream.expect('variable_end')
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+2018-07-15 16:26:57,519 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]

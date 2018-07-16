@@ -1,0 +1,121 @@
+2018-07-15 16:47:59,055 ERROR: Exception on /user/saswatlevin/ [GET] [in c:\microblog\virtualenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\microblog\virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\microblog\app\routes.py", line 147, in user
+    return render_template('user.html',user=user,posts=posts)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\_post.html", line 4, in template
+    <td><a href="url_for{{'user',username=post.author.username}}" {{post.author.username}}></a> says: <b>{{post.body}}</b></td>
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\microblog\app\templates\base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\microblog\app\templates\user.html", line 27, in block "content"
+    {% include '_post.html' %}
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\_post.html", line 4, in template
+    <td><a href="url_for{{'user',username=post.author.username}}" {{post.author.username}}></a> says: <b>{{post.body}}</b></td>
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\parser.py", line 876, in subparse
+    self.stream.expect('variable_end')
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+2018-07-15 16:50:42,058 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 16:51:07,648 ERROR: Exception on /user/saswatlevin/ [GET] [in c:\microblog\virtualenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\microblog\virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\microblog\app\routes.py", line 147, in user
+    return render_template('user.html',user=user,posts=posts)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\microblog\app\templates\base.html", line 33, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\microblog\app\templates\user.html", line 27, in block "content"
+    {% include '_post.html' %}
+  File "C:\microblog\app\templates\_post.html", line 3, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'avatar'
+2018-07-15 17:12:18,529 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 20:36:36,439 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 20:40:24,661 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 21:12:31,969 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 21:13:07,100 ERROR: Exception on / [GET] [in c:\microblog\virtualenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\microblog\virtualenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\microblog\virtualenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\microblog\virtualenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\microblog\app\routes.py", line 34, in index
+    page-request.args.get('page',1,type=int)
+NameError: name 'page' is not defined
+2018-07-15 21:13:35,649 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 21:14:07,547 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
+2018-07-15 21:24:23,616 INFO: Microblog startup [in C:\microblog\app\__init__.py:71]
