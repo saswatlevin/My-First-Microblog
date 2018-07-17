@@ -134,6 +134,33 @@ to directly commit a file/change in a file w/o going to the staging area, we can
 
 git commit -am "comment"
 
- 
+
+
+
+
+
+To push files to an online GitHub Repo:
+
+Create a remote using
+
+git add remote [remote_name] [remote_http_url]
+
+To find the remote, type
+
+git remote
+
+Then type
+
+git push -u [remote_name] master
+
+
+OR
+
+If your project structure has changed, type
+
+git push -f [remote_name] master
+
+
+ where -f means "forced"
 
 
