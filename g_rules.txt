@@ -1,0 +1,139 @@
+1st, you need to give your username and email to git and you do that by doing the following
+
+git config --global user.name="Your Name"
+git config --global user.email="email@example.com"
+
+here '--global' refers to the current user and not to all the users on your computer
+
+
+
+pwd 
+
+gets you your present working directory
+
+
+
+
+git config --list 
+
+lists all your configuration settings
+
+
+
+git help 
+
+lists all git commands
+
+
+
+
+to get help with a specific command, type 
+
+git help 'command'
+
+,i.e,. the name of the command
+
+and you'll get all available info on that command as a HTML WebPage 
+
+
+
+
+to display your nam and email address respectively, do
+
+git config --global user.name
+git config --global user.email
+
+the same can also be used to get the value of any other configuration setting\
+
+
+
+
+when you type 
+
+git add .
+
+it adds all unadded folders/files in ur local folder initialised as repository(LFIR) to the staging area
+
+
+
+
+git commit -m "message"  
+
+adds all files/folders in the staging area to the repository
+
+these 2 steps take place sequentially
+
+
+
+
+
+to add a particular file to your LFIR type
+
+git add filename.extension
+
+the same steps in adding files to your LFIR are to be followed while making changes to the files and the changes made to the file are added to the repository in the same way as a new file is added to the repository
+
+
+
+
+git status 
+
+gives you the status of the repository(whether any added files/folders/changes are to be committed or not)
+
+
+
+
+git log
+
+gives you the history of commits made to the repository 
+
+
+
+git init
+
+initialises your present working directory as a .git repository
+
+
+
+git diff 
+
+shows u the difference b/w the text in the file in the repo and the text that u added, but haven't committed yet(shown in green)
+
+
+
+git rm filename.extension
+
+deletes the file from the repo. Weneed to commit after this command
+
+
+
+git rm .
+
+deletes everything in the repo
+
+
+
+
+git mv 1st.txt 2nd.txt
+
+renames 1st.txt to 2nd.txt, actually moves contents of 1st.txt to 2nd. txt
+
+
+to rename a file, just rename it manually, then to git add and then git rm the file with the old name
+
+
+
+
+we can designate a folder containing files and folders as a repo by getting to that folder in our present working directory and doing
+git init
+
+
+
+
+to directly commit a file/change in a file w/o going to the staging area, we can type
+
+git commit -am "comment"
+
+ 
+
+
